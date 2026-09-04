@@ -544,6 +544,31 @@ export const SignInCard: React.FC<SignInCardProps> = ({
                   </Button>
                 </motion.div>
               </div>
+
+              {/* Portal Switcher Link */}
+              <div className="pt-3.5 mt-2 border-t border-gray-100 text-center">
+                {portalType === "admin" ? (
+                  <p className="text-xs text-gray-500 font-medium">
+                    Sales team member?{" "}
+                    <a
+                      href="/sales/login"
+                      className="text-[#ff3b19] font-semibold hover:underline inline-flex items-center gap-1"
+                    >
+                      Login to Sales Panel &rarr;
+                    </a>
+                  </p>
+                ) : (
+                  <p className="text-xs text-gray-500 font-medium">
+                    Administrator?{" "}
+                    <a
+                      href="/admin/login"
+                      className="text-[#ff3b19] font-semibold hover:underline inline-flex items-center gap-1"
+                    >
+                      Login to Admin Panel &rarr;
+                    </a>
+                  </p>
+                )}
+              </div>
             </form>
           </motion.div>
         </div>
