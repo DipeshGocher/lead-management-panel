@@ -102,14 +102,15 @@
 
 /* 2. Pipeline Toolbar & Filters Card */
 .pipeline-toolbar-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 1.5px solid #93c5fd;
   border-radius: var(--radius-md);
-  padding: 14px 18px;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.1);
+  color: #0f172a;
 }
 
 .toolbar-top-flex {
@@ -122,8 +123,8 @@
 .view-scope-toggle {
   display: flex;
   align-items: center;
-  background-color: var(--bg-app);
-  border: 1px solid var(--border-color);
+  background-color: #ffffff;
+  border: 1px solid #93c5fd;
   border-radius: var(--radius-sm);
   padding: 3px;
   gap: 2px;
@@ -135,19 +136,19 @@
   gap: 6px;
   padding: 5px 12px;
   font-size: 0.775rem;
-  font-weight: 600;
+  font-weight: 700;
   border: none;
   background: none;
-  color: var(--text-muted);
+  color: #334155;
   border-radius: 4px;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .scope-btn.active {
-  background-color: var(--bg-surface);
-  color: var(--primary-600);
-  box-shadow: var(--shadow-xs);
+  background-color: #ff3b19;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(255, 59, 25, 0.3);
 }
 
 .pipeline-search-wrapper {
@@ -160,11 +161,15 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--text-muted);
+  color: #ff3b19;
 }
 
 .pipeline-search-wrapper .search-input {
   padding-left: 36px;
+  background-color: #ffffff !important;
+  border: 1.5px solid #93c5fd !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
 }
 
 .toolbar-filters-flex {
@@ -181,15 +186,19 @@
 }
 
 .filter-item .filter-label {
-  font-size: 0.725rem;
-  font-weight: 700;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #0f172a;
   text-transform: uppercase;
 }
 
 .filter-item select {
-  padding: 4px 8px;
+  padding: 6px 12px;
   font-size: 0.775rem;
+  font-weight: 700;
+  background-color: #ffffff;
+  border: 1.5px solid #93c5fd !important;
+  color: #0f172a;
 }
 
 /* 3. Horizontal Kanban Board Wrapper */

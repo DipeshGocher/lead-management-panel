@@ -23,8 +23,13 @@
 }
 
 /* Toolbar Card */
+/* Toolbar Card */
 .calendar-toolbar-card {
-  padding: 14px 20px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid #fed7aa;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.12);
+  color: #0f172a;
 }
 
 .toolbar-row-flex {
@@ -45,9 +50,9 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-sm);
-  background-color: var(--bg-app);
-  border: 1px solid var(--border-color);
-  color: var(--text-main);
+  background-color: #ffffff;
+  border: 1.5px solid #fed7aa;
+  color: #0f172a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,21 +61,21 @@
 }
 
 .nav-arrow-btn:hover {
-  background-color: var(--bg-surface);
-  border-color: var(--primary-400);
-  color: var(--primary-600);
+  background-color: #ff3b19;
+  border-color: #ff3b19;
+  color: #ffffff;
 }
 
 .current-month-title {
   font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--text-main);
+  font-weight: 900;
+  color: #0f172a;
   min-width: 170px;
   letter-spacing: -0.02em;
 }
 
 .today-btn {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .toolbar-controls-group {
@@ -83,8 +88,8 @@
 .view-switcher-group {
   display: flex;
   align-items: center;
-  background-color: var(--bg-app);
-  border: 1px solid var(--border-color);
+  background-color: #ffffff;
+  border: 1.5px solid #fed7aa;
   border-radius: var(--radius-sm);
   padding: 3px;
   gap: 2px;
@@ -93,30 +98,33 @@
 .view-btn {
   padding: 5px 14px;
   font-size: 0.775rem;
-  font-weight: 600;
+  font-weight: 700;
   border: none;
   background: none;
-  color: var(--text-muted);
+  color: #334155;
   border-radius: 4px;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .view-btn.active {
-  background-color: var(--bg-surface);
-  color: var(--primary-600);
-  box-shadow: var(--shadow-xs);
+  background-color: #ff3b19;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(255, 59, 25, 0.3);
 }
 
 .filter-toggle-btn.active {
-  background-color: var(--primary-50);
-  color: var(--primary-600);
-  border-color: var(--primary-200);
+  background-color: #ff3b19;
+  color: #ffffff;
+  border-color: #ff3b19;
 }
 
 /* Calendar Filters Card */
 .calendar-filters-card {
   padding: 16px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid #fed7aa;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.1);
   animation: fadeIn 0.2s ease-in-out;
 }
 
@@ -134,9 +142,9 @@
 }
 
 .filter-lbl {
-  font-size: 0.725rem;
-  font-weight: 700;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #0f172a;
   text-transform: uppercase;
 }
 
@@ -157,29 +165,29 @@
 
 /* 7-Column Month View Grid */
 .month-calendar-container {
-  background-color: var(--bg-surface);
-  border: 1px solid #cbd5e1;
+  background-color: #fff7ed;
+  border: 1.5px solid #fed7aa;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.12);
   overflow: hidden;
 }
 
 .month-grid-header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  background-color: #f8fafc;
-  border-bottom: 1px solid #cbd5e1;
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+  border-bottom: 1.5px solid #fdba74;
 }
 
 .day-name-cell {
-  padding: 10px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--text-muted);
+  padding: 12px;
+  font-size: 0.775rem;
+  font-weight: 800;
+  color: #0f172a;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  border-right: 1px solid #e2e8f0;
+  letter-spacing: 0.05em;
+  border-right: 1px solid #fdba74;
 }
 
 .day-name-cell:last-child {
@@ -189,12 +197,12 @@
 .month-grid-body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  background-color: #cbd5e1;
+  background-color: #fed7aa;
   gap: 1px;
 }
 
 .month-day-cell {
-  background-color: var(--bg-surface);
+  background-color: #fff7ed;
   min-height: 110px;
   padding: 8px;
   display: flex;
@@ -202,16 +210,16 @@
   gap: 6px;
   transition: background-color var(--transition-fast);
   position: relative;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #fed7aa;
 }
 
 .month-day-cell:hover {
-  background-color: #f8fafc;
+  background-color: #ffedd5;
 }
 
 .month-day-cell.other-month {
-  background-color: #f8fafc;
-  opacity: 0.55;
+  background-color: #fffaf5;
+  opacity: 0.65;
 }
 
 .month-day-cell.today-cell {
@@ -436,6 +444,10 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid #fed7aa;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.12);
+  color: #0f172a;
 }
 
 .today-mini-stats {
@@ -443,28 +455,29 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 6px;
   padding-bottom: 10px;
-  border-bottom: 1px dashed var(--border-color);
+  border-bottom: 1px dashed #fed7aa;
 }
 
 .mini-stat-pill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--bg-app);
+  background-color: #ffffff;
   padding: 6px 4px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
+  border: 1px solid #fed7aa;
 }
 
 .mini-stat-pill .stat-num {
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 900;
+  color: #0f172a;
 }
 
 .mini-stat-pill .stat-lbl {
   font-size: 0.65rem;
-  color: var(--text-subtle);
-  font-weight: 600;
+  color: #334155;
+  font-weight: 700;
 }
 
 .today-items-list {

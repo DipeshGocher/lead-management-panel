@@ -22,8 +22,9 @@
 .settings-tabs-sidebar {
   padding: 16px 14px;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.1);
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid #fed7aa;
 }
 
 .sidebar-tabs-list {
@@ -38,8 +39,8 @@
   gap: 12px;
   padding: 12px 16px;
   font-size: 0.875rem;
-  font-weight: 600;
-  color: #7090b0;
+  font-weight: 700;
+  color: #0f172a;
   background: none;
   border: none;
   border-radius: 14px;
@@ -50,7 +51,7 @@
 }
 
 .settings-nav-item:hover {
-  background-color: #fff1ee;
+  background-color: #ffffff;
   color: #ff3b19;
 }
 
@@ -68,8 +69,15 @@
 .settings-panel-card {
   padding: 28px;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.1);
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 1.5px solid #93c5fd;
+  color: #0f172a;
+}
+
+.settings-panel-card .card-header-flex {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-bottom: 1.5px solid #93c5fd;
 }
 
 .profile-avatar-lg {

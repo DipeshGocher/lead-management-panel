@@ -343,10 +343,11 @@ export const SalesPipeline = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    background: "#f8fafc",
+                    background: "#ffffff",
                     padding: "8px 12px",
                     borderRadius: "10px",
-                    border: "1px solid #e2e8f0"
+                    border: "1.5px solid #fed7aa",
+                    boxShadow: "0 2px 6px rgba(0, 0, 0, 0.03)"
                   }}
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -445,15 +446,15 @@ export const SalesPipeline = () => {
         ) : (
           <div
             style={{
-              background: "#ffffff",
+              background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
               borderRadius: "16px",
               padding: "40px 20px",
               textAlign: "center",
-              border: "1px dashed #cbd5e1"
+              border: "1.5px dashed #fdba74"
             }}
           >
-            <p style={{ fontWeight: 700, color: "#0f172a", margin: "0 0 4px 0" }}>No prospects in {activeStage}</p>
-            <span style={{ fontSize: "0.775rem", color: "#64748b" }}>
+            <p style={{ fontWeight: 800, color: "#0f172a", margin: "0 0 4px 0" }}>No prospects in {activeStage}</p>
+            <span style={{ fontSize: "0.775rem", color: "#334155", fontWeight: 600 }}>
               Leads in this stage will appear here automatically.
             </span>
           </div>
