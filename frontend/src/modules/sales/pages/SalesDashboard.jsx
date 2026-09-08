@@ -29,70 +29,74 @@ export const SalesDashboard = () => {
         </div>
       </div>
 
-      {/* KPI 4-Card Grid (4 on Desktop/Tablet, 2x2 on Mobile) */}
+      {/* KPI 4-Card Grid */}
       <div className="sales-mobile-kpi-grid">
         {/* Card 1: My Leads */}
         <div
           className="sales-mobile-kpi-card"
           onClick={() => navigate("/sales/leads")}
+          style={{ background: "linear-gradient(135deg, #ffe5e0 0%, #ffd4cc 100%)", border: "1.5px solid #ffb3a6", boxShadow: "0 6px 16px rgba(255, 59, 25, 0.15)" }}
         >
           <div className="sales-kpi-top-row">
-            <span className="sales-kpi-title">My Leads</span>
-            <div className="sales-kpi-icon-halo" style={{ background: "#fff1ee", color: "#ff3b19" }}>
+            <span className="sales-kpi-title" style={{ color: "#1e293b", fontWeight: 800 }}>My Leads</span>
+            <div className="sales-kpi-icon-halo" style={{ background: "#ffffff", color: "#ff3b19", boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }}>
               <Users size={16} />
             </div>
           </div>
-          <div className="sales-kpi-num">42</div>
-          <span style={{ fontSize: "0.685rem", color: "#059669", fontWeight: 700 }}>+3 this week</span>
+          <div className="sales-kpi-num" style={{ color: "#0f172a", fontWeight: 900 }}>42</div>
+          <span style={{ fontSize: "0.685rem", color: "#c2410c", fontWeight: 800 }}>+3 this week</span>
         </div>
 
         {/* Card 2: Active Prospects */}
         <div
           className="sales-mobile-kpi-card"
           onClick={() => navigate("/sales/pipeline")}
+          style={{ background: "linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%)", border: "1.5px solid #fdba74", boxShadow: "0 6px 16px rgba(234, 88, 12, 0.15)" }}
         >
           <div className="sales-kpi-top-row">
-            <span className="sales-kpi-title">Prospects</span>
-            <div className="sales-kpi-icon-halo" style={{ background: "#fff7ed", color: "#ea580c" }}>
+            <span className="sales-kpi-title" style={{ color: "#1e293b", fontWeight: 800 }}>Prospects</span>
+            <div className="sales-kpi-icon-halo" style={{ background: "#ffffff", color: "#c2410c", boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }}>
               <Activity size={16} />
             </div>
           </div>
-          <div className="sales-kpi-num">28</div>
-          <span style={{ fontSize: "0.685rem", color: "#ea580c", fontWeight: 700 }}>In pipeline</span>
+          <div className="sales-kpi-num" style={{ color: "#0f172a", fontWeight: 900 }}>28</div>
+          <span style={{ fontSize: "0.685rem", color: "#c2410c", fontWeight: 800 }}>In pipeline</span>
         </div>
 
         {/* Card 3: Follow-ups */}
         <div
           className="sales-mobile-kpi-card"
           onClick={() => navigate("/sales/follow-ups")}
+          style={{ background: "linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)", border: "1.5px solid #fcd34d", boxShadow: "0 6px 16px rgba(217, 119, 6, 0.15)" }}
         >
           <div className="sales-kpi-top-row">
-            <span className="sales-kpi-title">Follow-ups</span>
-            <div className="sales-kpi-icon-halo" style={{ background: "#fef3c7", color: "#d97706" }}>
+            <span className="sales-kpi-title" style={{ color: "#1e293b", fontWeight: 800 }}>Follow-ups</span>
+            <div className="sales-kpi-icon-halo" style={{ background: "#ffffff", color: "#b45309", boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }}>
               <Clock size={16} />
             </div>
           </div>
-          <div className="sales-kpi-num">5</div>
-          <span style={{ fontSize: "0.685rem", color: "#d97706", fontWeight: 700 }}>Due today</span>
+          <div className="sales-kpi-num" style={{ color: "#0f172a", fontWeight: 900 }}>5</div>
+          <span style={{ fontSize: "0.685rem", color: "#b45309", fontWeight: 800 }}>Due today</span>
         </div>
 
         {/* Card 4: Converted */}
         <div
           className="sales-mobile-kpi-card"
           onClick={() => navigate("/sales/leads?status=Converted")}
+          style={{ background: "linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)", border: "1.5px solid #86efac", boxShadow: "0 6px 16px rgba(22, 163, 74, 0.15)" }}
         >
           <div className="sales-kpi-top-row">
-            <span className="sales-kpi-title">Converted</span>
-            <div className="sales-kpi-icon-halo" style={{ background: "#dcfce7", color: "#16a34a" }}>
+            <span className="sales-kpi-title" style={{ color: "#1e293b", fontWeight: 800 }}>Converted</span>
+            <div className="sales-kpi-icon-halo" style={{ background: "#ffffff", color: "#15803d", boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }}>
               <CheckCircle2 size={16} />
             </div>
           </div>
-          <div className="sales-kpi-num">6</div>
-          <span style={{ fontSize: "0.685rem", color: "#16a34a", fontWeight: 700 }}>Won deals</span>
+          <div className="sales-kpi-num" style={{ color: "#0f172a", fontWeight: 900 }}>6</div>
+          <span style={{ fontSize: "0.685rem", color: "#15803d", fontWeight: 800 }}>Won deals</span>
         </div>
       </div>
 
-      {/* Two Column Section for Desktop / Tablet; Stacked for Mobile */}
+      {/* Two Column Section */}
       <div className="sales-dashboard-two-col">
         {/* Left: Today's Schedule Section */}
         <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -127,8 +131,8 @@ export const SalesDashboard = () => {
                     <Clock size={16} />
                   </div>
                   <div className="sales-task-meta">
-                    <h4 className="sales-task-lead-name">{task.lead}</h4>
-                    <span className="sales-task-details">{task.company} · {task.type}</span>
+                    <h4 className="sales-task-lead-name" style={{ color: "#0f172a", fontWeight: 800 }}>{task.lead}</h4>
+                    <span className="sales-task-details" style={{ color: "#334155", fontWeight: 600 }}>{task.company} · {task.type}</span>
                   </div>
                 </div>
 
@@ -168,76 +172,76 @@ export const SalesDashboard = () => {
             <div
               onClick={() => navigate("/sales/leads")}
               style={{
-                background: "#ffffff",
-                border: "1px solid #ece7dc",
-                borderLeft: "4px solid #ff3b19",
+                background: "linear-gradient(135deg, #ffe5e0 0%, #ffd4cc 100%)",
+                border: "1.5px solid #ffb3a6",
+                borderLeft: "5px solid #ff3b19",
                 borderRadius: "14px",
                 padding: "12px 14px",
                 display: "flex",
                 alignItems: "center",
                 gap: "12px",
                 cursor: "pointer",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.03)"
+                boxShadow: "0 4px 12px rgba(255, 59, 25, 0.12)"
               }}
             >
-              <div style={{ background: "#fff1ee", color: "#ff3b19", padding: "8px", borderRadius: "10px" }}>
+              <div style={{ background: "#ffffff", color: "#ff3b19", padding: "8px", borderRadius: "10px", boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }}>
                 <Users size={16} />
               </div>
               <div style={{ flex: 1 }}>
-                <strong style={{ fontSize: "0.825rem", color: "#141416", display: "block" }}>My Leads Directory</strong>
-                <span style={{ fontSize: "0.7rem", color: "#71717a" }}>Manage and view assigned prospects</span>
+                <strong style={{ fontSize: "0.825rem", color: "#0f172a", fontWeight: 800, display: "block" }}>My Leads Directory</strong>
+                <span style={{ fontSize: "0.7rem", color: "#334155", fontWeight: 600 }}>Manage and view assigned prospects</span>
               </div>
-              <ArrowRight size={14} color="#a1a1aa" />
+              <ArrowRight size={14} color="#ff3b19" />
             </div>
 
             <div
               onClick={() => navigate("/sales/pipeline")}
               style={{
-                background: "#ffffff",
-                border: "1px solid #ece7dc",
-                borderLeft: "4px solid #ff3b19",
+                background: "linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)",
+                border: "1.5px solid #86efac",
+                borderLeft: "5px solid #16a34a",
                 borderRadius: "14px",
                 padding: "12px 14px",
                 display: "flex",
                 alignItems: "center",
                 gap: "12px",
                 cursor: "pointer",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.03)"
+                boxShadow: "0 4px 12px rgba(22, 163, 74, 0.12)"
               }}
             >
-              <div style={{ background: "#f0fdf4", color: "#16a34a", padding: "8px", borderRadius: "10px" }}>
+              <div style={{ background: "#ffffff", color: "#16a34a", padding: "8px", borderRadius: "10px", boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }}>
                 <Kanban size={16} />
               </div>
               <div style={{ flex: 1 }}>
-                <strong style={{ fontSize: "0.825rem", color: "#141416", display: "block" }}>Sales Pipeline Stages</strong>
-                <span style={{ fontSize: "0.7rem", color: "#71717a" }}>Track stage movements and progress</span>
+                <strong style={{ fontSize: "0.825rem", color: "#0f172a", fontWeight: 800, display: "block" }}>Sales Pipeline Stages</strong>
+                <span style={{ fontSize: "0.7rem", color: "#334155", fontWeight: 600 }}>Track stage movements and progress</span>
               </div>
-              <ArrowRight size={14} color="#a1a1aa" />
+              <ArrowRight size={14} color="#16a34a" />
             </div>
 
             <div
               onClick={() => navigate("/sales/calendar")}
               style={{
-                background: "#ffffff",
-                border: "1px solid #ece7dc",
-                borderLeft: "4px solid #ff3b19",
+                background: "linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%)",
+                border: "1.5px solid #fdba74",
+                borderLeft: "5px solid #ea580c",
                 borderRadius: "14px",
                 padding: "12px 14px",
                 display: "flex",
                 alignItems: "center",
                 gap: "12px",
                 cursor: "pointer",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.03)"
+                boxShadow: "0 4px 12px rgba(234, 88, 12, 0.12)"
               }}
             >
-              <div style={{ background: "#fff7ed", color: "#ea580c", padding: "8px", borderRadius: "10px" }}>
+              <div style={{ background: "#ffffff", color: "#ea580c", padding: "8px", borderRadius: "10px", boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }}>
                 <Calendar size={16} />
               </div>
               <div style={{ flex: 1 }}>
-                <strong style={{ fontSize: "0.825rem", color: "#141416", display: "block" }}>Sales Calendar</strong>
-                <span style={{ fontSize: "0.7rem", color: "#71717a" }}>Review meeting schedule and events</span>
+                <strong style={{ fontSize: "0.825rem", color: "#0f172a", fontWeight: 800, display: "block" }}>Sales Calendar</strong>
+                <span style={{ fontSize: "0.7rem", color: "#334155", fontWeight: 600 }}>Review meeting schedule and events</span>
               </div>
-              <ArrowRight size={14} color="#a1a1aa" />
+              <ArrowRight size={14} color="#ea580c" />
             </div>
           </div>
         </div>

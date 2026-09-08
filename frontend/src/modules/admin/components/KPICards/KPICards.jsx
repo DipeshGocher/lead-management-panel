@@ -23,7 +23,10 @@ export const KPICards = ({ dateRange = "this_month" }) => {
       data: currentMetrics.totalLeads,
       icon: Users,
       color: "#ff3b19",
-      bgLight: "#fff1ee",
+      bgLight: "#ffffff",
+      cardBg: "linear-gradient(135deg, #ffe5e0 0%, #ffd4cc 100%)",
+      borderColor: "#ffb3a6",
+      shadow: "0 6px 16px rgba(255, 59, 25, 0.15)",
       statusFilter: "All",
     },
     {
@@ -31,8 +34,11 @@ export const KPICards = ({ dateRange = "this_month" }) => {
       key: "newLeads",
       data: currentMetrics.newLeads,
       icon: UserPlus,
-      color: "#ea580c",
-      bgLight: "#fff7ed",
+      color: "#c2410c",
+      bgLight: "#ffffff",
+      cardBg: "linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%)",
+      borderColor: "#fdba74",
+      shadow: "0 6px 16px rgba(234, 88, 12, 0.15)",
       statusFilter: "New",
     },
     {
@@ -40,8 +46,11 @@ export const KPICards = ({ dateRange = "this_month" }) => {
       key: "activeLeads",
       data: currentMetrics.activeLeads,
       icon: Activity,
-      color: "#0891b2",
-      bgLight: "#ecfeff",
+      color: "#0369a1",
+      bgLight: "#ffffff",
+      cardBg: "linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)",
+      borderColor: "#7dd3fc",
+      shadow: "0 6px 16px rgba(2, 132, 199, 0.15)",
       statusFilter: "Active",
     },
     {
@@ -50,7 +59,10 @@ export const KPICards = ({ dateRange = "this_month" }) => {
       data: currentMetrics.convertedLeads,
       icon: CheckCircle2,
       color: "#15803d",
-      bgLight: "#f0fdf4",
+      bgLight: "#ffffff",
+      cardBg: "linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)",
+      borderColor: "#86efac",
+      shadow: "0 6px 16px rgba(22, 163, 74, 0.15)",
       statusFilter: "Converted",
     },
     {
@@ -59,7 +71,10 @@ export const KPICards = ({ dateRange = "this_month" }) => {
       data: currentMetrics.lostLeads,
       icon: XCircle,
       color: "#b91c1c",
-      bgLight: "#fef2f2",
+      bgLight: "#ffffff",
+      cardBg: "linear-gradient(135deg, #fee2e2 0%, #fecaca 100%)",
+      borderColor: "#fca5a5",
+      shadow: "0 6px 16px rgba(220, 38, 38, 0.15)",
       statusFilter: "Lost",
     },
     {
@@ -68,7 +83,10 @@ export const KPICards = ({ dateRange = "this_month" }) => {
       data: currentMetrics.pendingFollowups,
       icon: Clock,
       color: "#b45309",
-      bgLight: "#fffbeb",
+      bgLight: "#ffffff",
+      cardBg: "linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)",
+      borderColor: "#fcd34d",
+      shadow: "0 6px 16px rgba(217, 119, 6, 0.15)",
       statusFilter: "Follow-up",
     },
   ];
@@ -83,13 +101,18 @@ export const KPICards = ({ dateRange = "this_month" }) => {
           <div
             key={card.id}
             className="kpi-card"
-            style={{ cursor: "pointer" }}
+            style={{
+              cursor: "pointer",
+              background: card.cardBg,
+              border: `1.5px solid ${card.borderColor}`,
+              boxShadow: card.shadow,
+            }}
             onClick={() => navigate(`/admin/leads?status=${card.statusFilter}`)}
             title={`Click to view ${label}`}
           >
             <div className="kpi-top">
-              <div className="kpi-icon-box" style={{ backgroundColor: card.bgLight, color: card.color }}>
-                <Icon size={16} />
+              <div className="kpi-icon-box" style={{ backgroundColor: card.bgLight, color: card.color, boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }}>
+                <Icon size={18} />
               </div>
               <div className={`kpi-badge ${isPositive ? "kpi-badge-pos" : "kpi-badge-neg"}`}>
                 {isPositive ? <TrendingUp size={11} /> : <AlertCircle size={11} />}
@@ -98,12 +121,12 @@ export const KPICards = ({ dateRange = "this_month" }) => {
             </div>
 
             <div className="kpi-middle">
-              <span className="kpi-label">{label}</span>
-              <h3 className="kpi-value">{value.toLocaleString()}</h3>
+              <span className="kpi-label" style={{ color: "#1e293b", fontWeight: 800 }}>{label}</span>
+              <h3 className="kpi-value" style={{ color: "#0f172a", fontWeight: 900 }}>{value.toLocaleString()}</h3>
             </div>
 
             <div className="kpi-bottom">
-              <span className="kpi-subtext">{subtext}</span>
+              <span className="kpi-subtext" style={{ color: "#334155", fontWeight: 700 }}>{subtext}</span>
             </div>
           </div>
         );

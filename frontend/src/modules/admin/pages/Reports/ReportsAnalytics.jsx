@@ -200,53 +200,53 @@ export const ReportsAnalytics = () => {
         <>
           {/* Top 4 KPI Cards */}
           <div className="reports-kpi-grid">
-            <div className="crm-card overview-stat-card">
+            <div className="crm-card overview-stat-card" style={{ background: "linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)", border: "1px solid #93c5fd", boxShadow: "0 4px 14px rgba(59, 130, 246, 0.12)" }}>
               <div className="stat-card-inner">
                 <div className="stat-info">
-                  <span className="stat-label">Total Leads</span>
-                  <div className="stat-value">{currentDataset.kpi.totalLeads}</div>
-                  <span className="stat-subtext text-emerald">{currentDataset.kpi.totalLeadsChange}</span>
+                  <span className="stat-label" style={{ color: "#334155", fontWeight: 700 }}>Total Leads</span>
+                  <div className="stat-value" style={{ color: "#0f172a", fontWeight: 900 }}>{currentDataset.kpi.totalLeads}</div>
+                  <span className="stat-subtext" style={{ color: "#166534", fontWeight: 700 }}>{currentDataset.kpi.totalLeadsChange}</span>
                 </div>
-                <div className="stat-icon-wrapper" style={{ backgroundColor: "rgba(79, 70, 229, 0.1)", color: "#4f46e5" }}>
+                <div className="stat-icon-wrapper" style={{ backgroundColor: "#dbeafe", color: "#1d4ed8", border: "1px solid #bfdbfe" }}>
                   <Users size={20} />
                 </div>
               </div>
             </div>
 
-            <div className="crm-card overview-stat-card">
+            <div className="crm-card overview-stat-card" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)", border: "1px solid #86efac", boxShadow: "0 4px 14px rgba(34, 197, 94, 0.12)" }}>
               <div className="stat-card-inner">
                 <div className="stat-info">
-                  <span className="stat-label">Converted Leads</span>
-                  <div className="stat-value text-emerald">{currentDataset.kpi.converted}</div>
-                  <span className="stat-subtext text-emerald">{currentDataset.kpi.convertedChange}</span>
+                  <span className="stat-label" style={{ color: "#334155", fontWeight: 700 }}>Converted Leads</span>
+                  <div className="stat-value" style={{ color: "#0f172a", fontWeight: 900 }}>{currentDataset.kpi.converted}</div>
+                  <span className="stat-subtext" style={{ color: "#166534", fontWeight: 700 }}>{currentDataset.kpi.convertedChange}</span>
                 </div>
-                <div className="stat-icon-wrapper" style={{ backgroundColor: "rgba(22, 163, 74, 0.1)", color: "#16a34a" }}>
+                <div className="stat-icon-wrapper" style={{ backgroundColor: "#dcfce7", color: "#15803d", border: "1px solid #bbf7d0" }}>
                   <CheckCircle2 size={20} />
                 </div>
               </div>
             </div>
 
-            <div className="crm-card overview-stat-card">
+            <div className="crm-card overview-stat-card" style={{ background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)", border: "1px solid #fed7aa", boxShadow: "0 4px 14px rgba(249, 115, 22, 0.12)" }}>
               <div className="stat-card-inner">
                 <div className="stat-info">
-                  <span className="stat-label">Conversion Rate</span>
-                  <div className="stat-value text-indigo">{currentDataset.kpi.rate}</div>
-                  <span className="stat-subtext text-emerald">{currentDataset.kpi.rateChange}</span>
+                  <span className="stat-label" style={{ color: "#334155", fontWeight: 700 }}>Conversion Rate</span>
+                  <div className="stat-value" style={{ color: "#0f172a", fontWeight: 900 }}>{currentDataset.kpi.rate}</div>
+                  <span className="stat-subtext" style={{ color: "#166534", fontWeight: 700 }}>{currentDataset.kpi.rateChange}</span>
                 </div>
-                <div className="stat-icon-wrapper" style={{ backgroundColor: "#fff1ee", color: "#ff3b19" }}>
+                <div className="stat-icon-wrapper" style={{ backgroundColor: "#ffedd5", color: "#c2410c", border: "1px solid #fed7aa" }}>
                   <TrendingUp size={20} />
                 </div>
               </div>
             </div>
 
-            <div className="crm-card overview-stat-card">
+            <div className="crm-card overview-stat-card" style={{ background: "linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)", border: "1px solid #c7d2fe", boxShadow: "0 4px 14px rgba(99, 102, 241, 0.12)" }}>
               <div className="stat-card-inner">
                 <div className="stat-info">
-                  <span className="stat-label">Revenue Generated</span>
-                  <div className="stat-value text-emerald">{currentDataset.kpi.revenue}</div>
-                  <span className="stat-subtext text-emerald">{currentDataset.kpi.revenueChange}</span>
+                  <span className="stat-label" style={{ color: "#334155", fontWeight: 700 }}>Revenue Generated</span>
+                  <div className="stat-value" style={{ color: "#0f172a", fontWeight: 900 }}>{currentDataset.kpi.revenue}</div>
+                  <span className="stat-subtext" style={{ color: "#166534", fontWeight: 700 }}>{currentDataset.kpi.revenueChange}</span>
                 </div>
-                <div className="stat-icon-wrapper" style={{ backgroundColor: "rgba(22, 163, 74, 0.1)", color: "#16a34a" }}>
+                <div className="stat-icon-wrapper" style={{ backgroundColor: "#ede9fe", color: "#4338ca", border: "1px solid #c7d2fe" }}>
                   <IndianRupee size={20} />
                 </div>
               </div>
@@ -256,34 +256,34 @@ export const ReportsAnalytics = () => {
           {/* Analytics Charts Grid */}
           <div className="charts-grid-two">
             {/* Chart 1: Lead Conversion Trend */}
-            <div className="crm-card report-chart-card">
-              <div className="card-header-flex">
-                <h3 className="section-title">
+            <div className="crm-card report-chart-card" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%)", border: "1px solid #a5f3fc", boxShadow: "0 4px 14px rgba(6, 182, 212, 0.1)" }}>
+              <div className="card-header-flex" style={{ background: "linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)", borderBottom: "1px solid #7dd3fc" }}>
+                <h3 className="section-title" style={{ color: "#0f172a", fontWeight: 800 }}>
                   <LineIcon size={18} className="text-indigo" /> Lead Conversion Trend
                 </h3>
-                <span className="section-subtext">Acquisition vs closures for {dateRange}</span>
+                <span className="section-subtext" style={{ color: "#334155", fontWeight: 600 }}>Acquisition vs closures for {dateRange}</span>
               </div>
 
               <LeadConversionTrendChart dateRange={dateRange} />
             </div>
 
             {/* Chart 2: Pipeline Distribution */}
-            <div className="crm-card report-chart-card">
-              <div className="card-header-flex">
-                <h3 className="section-title">
+            <div className="crm-card report-chart-card" style={{ background: "linear-gradient(135deg, #fdf2f8 0%, #fae8ff 100%)", border: "1px solid #f5d0fe", boxShadow: "0 4px 14px rgba(217, 70, 239, 0.1)" }}>
+              <div className="card-header-flex" style={{ background: "linear-gradient(135deg, #fae8ff 0%, #f5d0fe 100%)", borderBottom: "1px solid #e9d5ff" }}>
+                <h3 className="section-title" style={{ color: "#0f172a", fontWeight: 800 }}>
                   <PieIcon size={18} className="text-indigo" /> Pipeline Distribution
                 </h3>
-                <span className="section-subtext">Stage-wise lead volume breakdown</span>
+                <span className="section-subtext" style={{ color: "#334155", fontWeight: 600 }}>Stage-wise lead volume breakdown</span>
               </div>
 
               <div className="pipeline-bars-stack">
                 {(currentDataset.pipeline || []).map((p) => (
                   <div key={p.stage} className="pipeline-mini-row">
-                    <div className="stage-info-label">
-                      <span>{p.stage}</span>
-                      <strong>{p.count} leads ({p.pct}%)</strong>
+                    <div className="stage-info-label" style={{ color: "#0f172a", fontWeight: 700 }}>
+                      <span style={{ color: "#1e293b" }}>{p.stage}</span>
+                      <strong style={{ color: "#0f172a" }}>{p.count} leads ({p.pct}%)</strong>
                     </div>
-                    <div className="progress-bar-track">
+                    <div className="progress-bar-track" style={{ backgroundColor: "#e2e8f0" }}>
                       <div className="progress-bar-fill" style={{ width: `${Math.min(p.pct * 3, 100)}%`, backgroundColor: p.color }} />
                     </div>
                   </div>
@@ -293,12 +293,12 @@ export const ReportsAnalytics = () => {
           </div>
 
           {/* Sales Performance Section */}
-          <div className="crm-card reports-table-card">
-            <div className="card-header-flex">
-              <h3 className="section-title">
+          <div className="crm-card reports-table-card" style={{ background: "linear-gradient(135deg, #fffbe6 0%, #fef3c7 100%)", border: "1px solid #fde68a", boxShadow: "0 4px 14px rgba(245, 158, 11, 0.1)" }}>
+            <div className="card-header-flex" style={{ background: "linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)", borderBottom: "1px solid #fcd34d" }}>
+              <h3 className="section-title" style={{ color: "#0f172a", fontWeight: 800 }}>
                 <BarChart3 size={18} className="text-indigo" /> Salesperson Performance
               </h3>
-              <span className="section-count-pill">{filteredPerformance.length} Executives</span>
+              <span className="section-count-pill" style={{ background: "#78350f", color: "#ffffff" }}>{filteredPerformance.length} Executives</span>
             </div>
 
             {/* Filters */}

@@ -139,8 +139,8 @@
 
 .kpi-label {
   font-size: 0.8rem;
-  font-weight: 600;
-  color: #a3aed0;
+  font-weight: 700;
+  color: #475569;
   display: block;
   margin-bottom: 4px;
 }
@@ -159,8 +159,8 @@
 
 .kpi-subtext {
   font-size: 0.725rem;
-  color: #a3aed0;
-  font-weight: 500;
+  color: #64748b;
+  font-weight: 600;
   display: block;
   white-space: nowrap;
   overflow: hidden;

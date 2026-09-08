@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-import { SignInCard } from "@/components/ui/travel-connect-signin-1";
+import { SignInCard } from "@/components/ui/travel-connect-signin-1.tsx";
 
 export const SalesLogin = () => {
   const navigate = useNavigate();

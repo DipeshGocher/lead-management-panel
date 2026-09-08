@@ -382,15 +382,15 @@ export const Notifications = () => {
 
       {/* Unread Notifications Box (Compact & Compatible) */}
       <div className="notif-summary-row">
-        <div className="summary-pill active-unread">
+        <div className="summary-pill active-unread" style={{ background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)", border: "1px solid #fed7aa", color: "#0f172a" }}>
           <Bell size={14} className="text-primary" />
-          <span>Unread Notifications:</span>
-          <strong>{unreadCount}</strong>
+          <span style={{ color: "#334155", fontWeight: 700 }}>Unread Notifications:</span>
+          <strong style={{ color: "#0f172a", fontWeight: 900 }}>{unreadCount}</strong>
         </div>
       </div>
 
       {/* Main List Card */}
-      <div className="crm-card notif-main-card">
+      <div className="crm-card notif-main-card" style={{ background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)", border: "1.5px solid #fed7aa", boxShadow: "0 4px 14px rgba(249, 115, 22, 0.12)" }}>
         {/* Tabs */}
         <div className="notif-tabs-bar">
           {["All", "Unread", "Leads", "Follow-ups", "Pipeline"].map((t) => (

@@ -238,7 +238,7 @@ export const SalesFollowUps = () => {
                 </div>
 
                 {item.notes && (
-                  <p style={{ fontSize: "0.775rem", color: "#475569", margin: "2px 0 0 0", fontStyle: "italic", background: "#f8fafc", padding: "8px 10px", borderRadius: "8px" }}>
+                  <p style={{ fontSize: "0.775rem", color: "#0f172a", fontWeight: 600, margin: "2px 0 0 0", fontStyle: "italic", background: "#ffffff", padding: "8px 10px", borderRadius: "8px", border: "1px solid #fed7aa" }}>
                     "{item.notes}"
                   </p>
                 )}
@@ -301,15 +301,15 @@ export const SalesFollowUps = () => {
         ) : (
           <div
             style={{
-              background: "#ffffff",
+              background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
               borderRadius: "16px",
               padding: "40px 20px",
               textAlign: "center",
-              border: "1px dashed #cbd5e1"
+              border: "1.5px dashed #fdba74"
             }}
           >
-            <p style={{ fontWeight: 700, color: "#0f172a", margin: "0 0 4px 0" }}>No follow-ups found</p>
-            <span style={{ fontSize: "0.775rem", color: "#64748b" }}>
+            <p style={{ fontWeight: 800, color: "#0f172a", margin: "0 0 4px 0" }}>No follow-ups found</p>
+            <span style={{ fontSize: "0.775rem", color: "#334155", fontWeight: 600 }}>
               All clear! You have no tasks in this tab.
             </span>
           </div>

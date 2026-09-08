@@ -8,33 +8,44 @@ export const AssignmentOverview = ({ stats }) => {
       value: stats.total,
       subtext: "System wide leads",
       icon: Users,
-      iconBg: "#fff1ee",
+      iconBg: "#ffffff",
       iconColor: "#ff3b19",
+      cardBg: "linear-gradient(135deg, #ffe5e0 0%, #ffd4cc 100%)",
+      borderColor: "#ffb3a6",
+      shadow: "0 4px 14px rgba(255, 59, 25, 0.12)",
     },
     {
       title: "Unassigned",
       value: stats.unassigned,
       subtext: "Needs delegation",
       icon: UserX,
-      iconBg: "rgba(245, 158, 11, 0.1)",
-      iconColor: "#d97706",
-      highlight: true,
+      iconBg: "#ffffff",
+      iconColor: "#b45309",
+      cardBg: "linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)",
+      borderColor: "#fcd34d",
+      shadow: "0 4px 14px rgba(217, 119, 6, 0.12)",
     },
     {
       title: "Assigned",
       value: stats.assigned,
       subtext: "Active in pipeline",
       icon: UserCheck,
-      iconBg: "rgba(16, 185, 129, 0.1)",
-      iconColor: "#059669",
+      iconBg: "#ffffff",
+      iconColor: "#15803d",
+      cardBg: "linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)",
+      borderColor: "#86efac",
+      shadow: "0 4px 14px rgba(22, 163, 74, 0.12)",
     },
     {
       title: "Sales Employees",
       value: stats.salespersonsCount,
       subtext: "Active team members",
       icon: ShieldCheck,
-      iconBg: "#fff7ed",
-      iconColor: "#ea580c",
+      iconBg: "#ffffff",
+      iconColor: "#c2410c",
+      cardBg: "linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%)",
+      borderColor: "#fdba74",
+      shadow: "0 4px 14px rgba(234, 88, 12, 0.12)",
     },
   ];
 
@@ -43,16 +54,24 @@ export const AssignmentOverview = ({ stats }) => {
       {cards.map((card) => {
         const Icon = card.icon;
         return (
-          <div key={card.title} className={`crm-card overview-stat-card ${card.highlight ? "highlight-warning" : ""}`}>
+          <div
+            key={card.title}
+            className="crm-card overview-stat-card"
+            style={{
+              background: card.cardBg,
+              border: `1.5px solid ${card.borderColor}`,
+              boxShadow: card.shadow,
+            }}
+          >
             <div className="stat-card-inner">
               <div className="stat-info">
-                <span className="stat-label">{card.title}</span>
-                <div className="stat-value">{card.value}</div>
-                <span className="stat-subtext">{card.subtext}</span>
+                <span className="stat-label" style={{ color: "#1e293b", fontWeight: 800 }}>{card.title}</span>
+                <div className="stat-value" style={{ color: "#0f172a", fontWeight: 900 }}>{card.value}</div>
+                <span className="stat-subtext" style={{ color: "#334155", fontWeight: 700 }}>{card.subtext}</span>
               </div>
               <div
                 className="stat-icon-wrapper"
-                style={{ backgroundColor: card.iconBg, color: card.iconColor }}
+                style={{ backgroundColor: card.iconBg, color: card.iconColor, boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }}
               >
                 <Icon size={20} />
               </div>

@@ -221,38 +221,38 @@ export const SalesCalendar = () => {
   return (
     <div className="sales-page-container">
       {/* 1. Header with Month Navigator & Full-Width Client/Lead Search */}
-      <div className="bg-white border border-[#ece7dc] rounded-2xl p-4 sm:p-5 shadow-sm flex flex-col gap-3.5">
+      <div style={{ background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)", border: "1.5px solid #fed7aa", boxShadow: "0 4px 14px rgba(249, 115, 22, 0.12)" }} className="rounded-2xl p-4 sm:p-5 flex flex-col gap-3.5">
         {/* Top: Month Switcher */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={prevMonth}
-              className="p-1.5 rounded-lg border border-[#ece7dc] text-slate-700 hover:bg-[#fff7ed] hover:border-[#ffd2c7] hover:text-[#ff3b19] transition-all cursor-pointer"
+              className="p-1.5 rounded-lg bg-white border border-[#fed7aa] text-slate-800 hover:bg-[#ff3b19] hover:border-[#ff3b19] hover:text-white transition-all cursor-pointer"
               title="Previous Month"
             >
               <ChevronLeft size={16} />
             </button>
-            <h2 className="font-bold text-base sm:text-lg text-slate-900 select-none">
+            <h2 className="font-extrabold text-base sm:text-lg text-slate-900 select-none">
               {MONTH_NAMES[month]} {year}
             </h2>
             <button
               type="button"
               onClick={nextMonth}
-              className="p-1.5 rounded-lg border border-[#ece7dc] text-slate-700 hover:bg-[#fff7ed] hover:border-[#ffd2c7] hover:text-[#ff3b19] transition-all cursor-pointer"
+              className="p-1.5 rounded-lg bg-white border border-[#fed7aa] text-slate-800 hover:bg-[#ff3b19] hover:border-[#ff3b19] hover:text-white transition-all cursor-pointer"
               title="Next Month"
             >
               <ChevronRight size={16} />
             </button>
           </div>
 
-          <span className="text-xs font-semibold text-slate-500 hidden sm:inline">
+          <span className="text-xs font-bold text-slate-700 hidden sm:inline">
             Follow-up Calendar
           </span>
         </div>
 
         {/* Client/Lead Search Field (Proper Width, No Date Picker, No Show All) */}
-        <div className="pt-2 border-t border-[#ece7dc]">
+        <div className="pt-2 border-t border-[#fed7aa]">
           <div className="sales-calendar-search-box relative w-full flex items-center">
             <Search size={16} className="sales-calendar-search-icon" color="#ff3b19" />
             <input
@@ -264,6 +264,10 @@ export const SalesCalendar = () => {
               style={{
                 paddingLeft: "44px",
                 paddingRight: searchTerm ? "38px" : "16px",
+                backgroundColor: "#ffffff",
+                border: "1.5px solid #fed7aa",
+                color: "#0f172a",
+                fontWeight: 600
               }}
             />
             {searchTerm && (
@@ -282,16 +286,16 @@ export const SalesCalendar = () => {
         {/* 2. Interactive Calendar Grid (Short, compact, client-friendly) */}
         <div className="pt-2">
           {/* Days of week header (Short 3-letter labels, no overlapping!) */}
-          <div className="grid grid-cols-7 text-center pb-2 border-b border-[#ece7dc]">
+          <div style={{ background: "linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%)", padding: "8px", borderRadius: "10px", border: "1.5px solid #fdba74" }} className="grid grid-cols-7 text-center mb-2">
             {DAY_LABELS.map((d, i) => (
-              <div key={d} className={`text-[11px] sm:text-xs font-bold ${i >= 5 ? "text-slate-400" : "text-slate-600"}`}>
+              <div key={d} style={{ color: "#0f172a" }} className="text-[11px] sm:text-xs font-extrabold">
                 {d}
               </div>
             ))}
           </div>
 
           {/* Days Grid */}
-          <div className="grid grid-cols-7 gap-1 pt-2">
+          <div className="grid grid-cols-7 gap-1 pt-1">
             {calendarDays.map((cd, idx) => {
               const isSelected = selectedDateStr === cd.dateStr;
               const hasEvents = (eventCountsByDate[cd.dateStr] || 0) > 0;
@@ -303,10 +307,10 @@ export const SalesCalendar = () => {
                   onClick={() => setSelectedDateStr(cd.dateStr)}
                   className={`relative flex flex-col items-center justify-center p-1 sm:p-2 rounded-xl transition-all cursor-pointer min-h-[42px] sm:min-h-[50px] ${
                     isSelected
-                      ? "bg-[#ff3b19] text-white font-bold shadow-md shadow-[#ff3b19]/25"
+                      ? "bg-[#ff3b19] text-white font-black shadow-md shadow-[#ff3b19]/25"
                       : cd.isCurrentMonth
-                      ? "text-slate-800 hover:bg-[#fff7ed]"
-                      : "text-slate-300 hover:bg-slate-50"
+                      ? "bg-[#fff7ed] text-slate-900 border border-[#fed7aa] font-extrabold hover:bg-[#ffedd5]"
+                      : "bg-[#fffaf5]/70 text-slate-400 border border-[#fed7aa]/50 hover:bg-[#fff7ed]"
                   }`}
                 >
                   <span className="text-xs sm:text-sm">{cd.dayNumber}</span>
@@ -340,11 +344,11 @@ export const SalesCalendar = () => {
       {/* 3. Follow-up Event Cards Section */}
       <div className="flex flex-col gap-2.5">
         <div className="flex items-center justify-between px-1">
-          <h3 className="font-bold text-sm sm:text-base text-slate-900 flex items-center gap-2">
+          <h3 className="font-extrabold text-sm sm:text-base text-slate-900 flex items-center gap-2">
             <Clock size={16} className="text-[#ff3b19]" />
             Follow-ups on {formattedSelectedDate}
           </h3>
-          <span className="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
+          <span className="text-xs font-bold text-[#ff3b19] bg-[#fff1ee] border border-[#ffd2c7] px-2.5 py-0.5 rounded-full">
             {displayEvents.length} scheduled
           </span>
         </div>
@@ -354,7 +358,13 @@ export const SalesCalendar = () => {
             {displayEvents.map((evt) => (
               <div
                 key={evt.id}
-                className="bg-white border border-[#ece7dc] border-l-4 border-l-[#ff3b19] rounded-xl p-3.5 shadow-sm flex flex-col gap-2.5 transition-all hover:border-[#ff3b19]/40"
+                style={{
+                  background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
+                  border: "1.5px solid #fed7aa",
+                  borderLeft: "4px solid #ff3b19",
+                  boxShadow: "0 4px 14px rgba(249, 115, 22, 0.12)"
+                }}
+                className="rounded-xl p-3.5 flex flex-col gap-2.5 transition-all"
               >
                 {/* Header: Lead Name & Type */}
                 <div className="flex items-start justify-between gap-2">
@@ -378,24 +388,24 @@ export const SalesCalendar = () => {
                     </div>
 
                     <div className="flex flex-col min-w-0">
-                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 truncate">
+                      <h4 className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">
                         {evt.leadName}
                       </h4>
-                      <span className="text-[11px] text-slate-500 truncate">
+                      <span className="text-[11px] font-semibold text-slate-700 truncate">
                         {evt.company}
                       </span>
                     </div>
                   </div>
 
-                  <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 shrink-0">
+                  <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-white border border-[#fed7aa] text-slate-800 shrink-0">
                     {evt.time}
                   </span>
                 </div>
 
                 {/* Notes */}
                 {evt.notes && (
-                  <p className="text-xs text-slate-600 bg-[#fbf9f4] rounded-lg p-2 border border-[#ece7dc] leading-relaxed">
-                    {evt.notes}
+                  <p style={{ background: "#ffffff", border: "1px solid #fed7aa", color: "#0f172a", fontWeight: 600 }} className="text-xs rounded-lg p-2 leading-relaxed italic">
+                    "{evt.notes}"
                   </p>
                 )}
 

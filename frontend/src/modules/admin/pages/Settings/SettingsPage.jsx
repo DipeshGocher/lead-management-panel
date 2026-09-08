@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
@@ -55,7 +56,7 @@ export const SettingsPage = () => {
 
   // Pipeline Stages State
   const [pipelineStages, setPipelineStages] = useState([
-    { id: 1, name: "New", color: "#ff3b19" },
+    { id: 1, name: "New", color: "#3b82f6" },
     { id: 2, name: "Contacted", color: "#8b5cf6" },
     { id: 3, name: "Follow-up", color: "#eab308" },
     { id: 4, name: "Interested", color: "#06b6d4" },
@@ -123,7 +124,7 @@ export const SettingsPage = () => {
       name: userObj.name,
       email: userObj.email,
       phone: userObj.phone || "+91 98765 00000",
-      role: userObj.role || "Sales Employee",
+      role: userObj.role || "Sales Person",
       status: "Active",
       assignedLeads: 0,
       activeLeads: 0,
@@ -137,7 +138,7 @@ export const SettingsPage = () => {
     localStorage.setItem("leadflow_mock_team_users", JSON.stringify(updatedList));
 
     setShowAddSalespersonModal(false);
-    setToastMessage(`New sales employee '${userObj.name}' added successfully!`);
+    setToastMessage(`New salesperson '${userObj.name}' added successfully!`);
     setIsToastOpen(true);
   };
 
@@ -199,7 +200,7 @@ export const SettingsPage = () => {
       {/* Settings Split Layout */}
       <div className="settings-split-grid">
         {/* Left Settings Sidebar */}
-        <div className="crm-card settings-tabs-sidebar">
+        <div className="crm-card settings-tabs-sidebar" style={{ background: "linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)", border: "1px solid #cbd5e1" }}>
           <div className="sidebar-tabs-list">
             {tabs.map((t) => {
               const IconComp = t.icon;
@@ -219,7 +220,7 @@ export const SettingsPage = () => {
         {/* Right Settings Content Panel */}
         <div className="settings-content-area">
           {activeTab === "profile" && (
-            <div className="crm-card settings-panel-card">
+            <div className="crm-card settings-panel-card" style={{ background: "linear-gradient(135deg, #fafaf9 0%, #f4f4f5 100%)", border: "1px solid #cbd5e1", boxShadow: "0 4px 14px rgba(15, 23, 42, 0.05)" }}>
               <div className="card-header-flex">
                 <h3 className="section-title">My Profile</h3>
               </div>
@@ -338,7 +339,7 @@ export const SettingsPage = () => {
           )}
 
           {activeTab === "pipeline" && (
-            <div className="crm-card settings-panel-card">
+            <div className="crm-card settings-panel-card" style={{ background: "linear-gradient(135deg, #fafaf9 0%, #f4f4f5 100%)", border: "1px solid #cbd5e1", boxShadow: "0 4px 14px rgba(15, 23, 42, 0.05)" }}>
               <div className="card-header-flex">
                 <h3 className="section-title">Pipeline Stages Configuration</h3>
                 <button className="crm-btn crm-btn-primary crm-btn-sm" onClick={() => setShowAddStageModal(true)}>
@@ -348,8 +349,8 @@ export const SettingsPage = () => {
 
               <div className="stages-list-stack" style={{ marginTop: "16px", display: "flex", flexDirection: "column", gap: "8px" }}>
                 {pipelineStages.map((st, idx) => (
-                  <div key={st.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 14px", backgroundColor: "var(--bg-app)", borderRadius: "var(--radius-sm)", borderLeft: `4px solid ${st.color}` }}>
-                    <span style={{ fontSize: "0.85rem", fontWeight: 700 }}>{idx + 1}. {st.name}</span>
+                  <div key={st.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 14px", backgroundColor: "#ffffff", borderRadius: "var(--radius-sm)", borderLeft: `4px solid ${st.color}`, border: "1px solid #e2e8f0" }}>
+                    <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0f172a" }}>{idx + 1}. {st.name}</span>
                     <button className="action-menu-btn text-rose" onClick={() => handleDeleteStage(st.id)}>
                       <Trash2 size={15} />
                     </button>
@@ -360,8 +361,8 @@ export const SettingsPage = () => {
           )}
 
           {activeTab === "notifications" && (
-            <div className="crm-card settings-panel-card">
-              <h3 className="section-title">Notification Preferences</h3>
+            <div className="crm-card settings-panel-card" style={{ background: "linear-gradient(135deg, #fafaf9 0%, #f4f4f5 100%)", border: "1px solid #cbd5e1", boxShadow: "0 4px 14px rgba(15, 23, 42, 0.05)" }}>
+              <h3 className="section-title" style={{ color: "#0f172a" }}>Notification Preferences</h3>
               <div style={{ marginTop: "16px", display: "flex", flexDirection: "column", gap: "12px" }}>
                 {[
                   "New Lead Assigned Alerts",
@@ -370,8 +371,8 @@ export const SettingsPage = () => {
                   "Deal Conversion Notifications",
                   "Daily Digest Email",
                 ].map((item) => (
-                  <div key={item} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 14px", backgroundColor: "var(--bg-app)", borderRadius: "var(--radius-sm)" }}>
-                    <span style={{ fontSize: "0.85rem", fontWeight: 600 }}>{item}</span>
+                  <div key={item} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 14px", backgroundColor: "#ffffff", borderRadius: "var(--radius-sm)", border: "1px solid #e2e8f0" }}>
+                    <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#0f172a" }}>{item}</span>
                     <input type="checkbox" className="crm-checkbox" defaultChecked />
                   </div>
                 ))}
@@ -383,20 +384,20 @@ export const SettingsPage = () => {
           )}
 
           {activeTab === "lead-mgmt" && (
-            <div className="crm-card settings-panel-card">
-              <h3 className="section-title">Lead Management Rules</h3>
+            <div className="crm-card settings-panel-card" style={{ background: "linear-gradient(135deg, #fafaf9 0%, #f4f4f5 100%)", border: "1px solid #cbd5e1", boxShadow: "0 4px 14px rgba(15, 23, 42, 0.05)" }}>
+              <h3 className="section-title" style={{ color: "#0f172a" }}>Lead Management Rules</h3>
               <div style={{ marginTop: "16px", display: "flex", flexDirection: "column", gap: "14px" }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px", backgroundColor: "var(--bg-app)", borderRadius: "var(--radius-sm)" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px", backgroundColor: "#ffffff", borderRadius: "var(--radius-sm)", border: "1px solid #e2e8f0" }}>
                   <div>
-                    <strong style={{ fontSize: "0.85rem" }}>Duplicate Lead Prevention</strong>
-                    <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", margin: 0 }}>Check for duplicate phone numbers and emails on creation</p>
+                    <strong style={{ fontSize: "0.85rem", color: "#0f172a" }}>Duplicate Lead Prevention</strong>
+                    <p style={{ fontSize: "0.75rem", color: "#64748b", margin: 0 }}>Check for duplicate phone numbers and emails on creation</p>
                   </div>
                   <input type="checkbox" className="crm-checkbox" defaultChecked />
                 </div>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px", backgroundColor: "var(--bg-app)", borderRadius: "var(--radius-sm)" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px", backgroundColor: "#ffffff", borderRadius: "var(--radius-sm)", border: "1px solid #e2e8f0" }}>
                   <div>
-                    <strong style={{ fontSize: "0.85rem" }}>Round-Robin Auto Assignment</strong>
-                    <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", margin: 0 }}>Automatically assign unassigned incoming leads to sales team</p>
+                    <strong style={{ fontSize: "0.85rem", color: "#0f172a" }}>Round-Robin Auto Assignment</strong>
+                    <p style={{ fontSize: "0.75rem", color: "#64748b", margin: 0 }}>Automatically assign unassigned incoming leads to sales team</p>
                   </div>
                   <input type="checkbox" className="crm-checkbox" defaultChecked />
                 </div>

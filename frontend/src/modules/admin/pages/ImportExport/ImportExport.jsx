@@ -144,16 +144,16 @@ ${xmlRows}
       </div>
 
       {/* EXPORT DATA CARD */}
-      <div className="crm-card ie-main-card" style={{ marginBottom: "24px" }}>
-        <div className="card-header-flex">
-          <h3 className="section-title">
+      <div className="crm-card ie-main-card" style={{ marginBottom: "24px", background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)", border: "1px solid #fed7aa", boxShadow: "0 4px 14px rgba(249, 115, 22, 0.12)" }}>
+        <div className="card-header-flex" style={{ background: "linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%)", borderBottom: "1px solid #fdba74" }}>
+          <h3 className="section-title" style={{ color: "#0f172a", fontWeight: 800 }}>
             <Download size={18} className="text-indigo" /> Export Data
           </h3>
         </div>
 
         <div className="export-form-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "flex-end" }}>
           <div className="form-group">
-            <label className="form-label" style={{ fontWeight: 700, fontSize: "0.825rem", color: "#1b2559", marginBottom: "6px", display: "block" }}>
+            <label className="form-label" style={{ fontWeight: 700, fontSize: "0.825rem", color: "#0f172a", marginBottom: "6px", display: "block" }}>
               Data Module to Export *
             </label>
             <CustomSelect
@@ -169,7 +169,7 @@ ${xmlRows}
           </div>
 
           <div className="form-group">
-            <label className="form-label" style={{ fontWeight: 700, fontSize: "0.825rem", color: "#1b2559", marginBottom: "6px", display: "block" }}>
+            <label className="form-label" style={{ fontWeight: 700, fontSize: "0.825rem", color: "#0f172a", marginBottom: "6px", display: "block" }}>
               Export File Format *
             </label>
             <div className="format-options-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
@@ -187,7 +187,7 @@ ${xmlRows}
           </div>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "20px", paddingTop: "16px", borderTop: "1px solid #f1f5f9" }}>
+        <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "20px", paddingTop: "16px", borderTop: "1px solid #fdba74" }}>
           <button className="crm-btn crm-btn-primary" onClick={() => handleRunExport()}>
             <Download size={15} /> Export Data Now
           </button>
@@ -195,12 +195,12 @@ ${xmlRows}
       </div>
 
       {/* Recent Export History Table */}
-      <div className="crm-card ie-history-card">
-        <div className="card-header-flex">
-          <h3 className="section-title">
+      <div className="crm-card ie-history-card" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)", border: "1px solid #86efac", boxShadow: "0 4px 14px rgba(34, 197, 94, 0.12)" }}>
+        <div className="card-header-flex" style={{ background: "linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)", borderBottom: "1px solid #86efac" }}>
+          <h3 className="section-title" style={{ color: "#0f172a", fontWeight: 800 }}>
             <FileText size={18} className="text-indigo" /> Recent Export History
           </h3>
-          <span className="section-count-pill">{exportHistory.length} Files</span>
+          <span className="section-count-pill" style={{ background: "#14532d", color: "#ffffff" }}>{exportHistory.length} Files</span>
         </div>
 
         <div className="table-responsive-container" style={{ marginTop: "14px" }}>

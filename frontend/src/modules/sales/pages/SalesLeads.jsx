@@ -286,15 +286,15 @@ export const SalesLeads = () => {
         ) : (
           <div
             style={{
-              background: "#ffffff",
+              background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
               borderRadius: "16px",
               padding: "40px 20px",
               textAlign: "center",
-              border: "1px dashed #cbd5e1"
+              border: "1.5px dashed #fdba74"
             }}
           >
-            <p style={{ fontWeight: 700, color: "#0f172a", margin: "0 0 4px 0" }}>No leads found</p>
-            <span style={{ fontSize: "0.775rem", color: "#64748b" }}>
+            <p style={{ fontWeight: 800, color: "#0f172a", margin: "0 0 4px 0" }}>No leads found</p>
+            <span style={{ fontSize: "0.775rem", color: "#334155", fontWeight: 600 }}>
               Try adjusting your search query or status filter.
             </span>
           </div>

@@ -180,19 +180,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
 }
 
-/* Subscrr Pure White Rounded Card System */
+/* Subscrr Vibrant Rounded Card System */
 .crm-card {
-  background-color: #ffffff;
-  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #cbd5e1;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
   padding: 24px;
+  color: #0f172a;
   transition: all var(--transition-fast);
 }
 
 .crm-card:hover {
-  border-color: #ded8cb;
-  box-shadow: var(--shadow-md);
+  border-color: #94a3b8;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 /* Subscrr Obsidian Dark Card Utility */
@@ -206,21 +207,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-section-card {
-  background-color: #ffffff;
-  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, #fafaf9 0%, #f4f4f5 100%);
+  border: 1px solid #cbd5e1;
   border-radius: var(--radius-lg);
+  color: #0f172a;
 }
 
 .card-header-flex {
   padding: 16px 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid var(--border-color);
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #cbd5e1;
   border-top-left-radius: var(--radius-lg);
   border-top-right-radius: var(--radius-lg);
   margin: -20px -20px 16px -20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #0f172a;
 }
 
 /* Status Badges - Pill Style */
@@ -293,29 +296,34 @@ h1, h2, h3, h4, h5, h6 {
   border-spacing: 0;
   font-size: 0.875rem;
   margin-top: 12px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid #fed7aa;
 }
 
 .crm-table th {
-  background-color: #f8f5ee;
-  color: #737373;
-  font-weight: 700;
-  font-size: 0.725rem;
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 0.775rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 12px 18px;
+  padding: 14px 18px;
   text-align: left;
-  border-bottom: 1px solid #ece7dc;
+  border-bottom: 2px solid #fdba74;
 }
 
 .crm-table td {
   padding: 14px 18px;
-  color: var(--text-main);
-  border-bottom: 1px solid #f5f1e8;
+  color: #0f172a;
+  font-weight: 600;
+  border-bottom: 1px solid #fed7aa;
   vertical-align: middle;
+  background-color: #ffffff;
 }
 
 .crm-table tr:hover td {
-  background-color: #fbf9f4;
+  background-color: #fff7ed;
 }
 
 /* Subscrr Button Component */
@@ -349,13 +357,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .crm-btn-secondary {
   background-color: #ffffff;
-  color: #141416;
-  border: 1px solid #ece7dc;
+  color: #0f172a;
+  border: 1.5px solid #cbd5e1;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  font-weight: 700;
 }
 
 .crm-btn-secondary:hover {
-  background-color: #fbf9f4;
+  background-color: #fff7ed;
   border-color: #ff3b19;
   color: #ff3b19;
 }
@@ -370,17 +379,29 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffe2dc;
 }
 
-/* Form Controls - Clean Warm Field Borders */
+/* Form Controls - High Contrast Dark Text & Clear Borders */
+label, .form-label {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
 .crm-input, select, input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"] {
   width: 100%;
   padding: 10px 16px;
   font-size: 0.875rem;
-  border: 1px solid #ece7dc !important;
+  font-weight: 600 !important;
+  border: 1.5px solid #cbd5e1 !important;
   border-radius: var(--radius-md);
   background-color: #ffffff;
-  color: var(--text-main);
+  color: #0f172a !important;
   outline: none;
   transition: all var(--transition-fast);
+}
+
+.crm-input::placeholder, input::placeholder {
+  color: #475569 !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
 }
 
 .crm-input:focus, select:focus, input:focus {

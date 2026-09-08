@@ -70,6 +70,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid #fed7aa;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.12);
+  border-radius: var(--radius-lg);
+  color: #0f172a;
 }
 
 .summary-left {
@@ -82,14 +87,14 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  background: linear-gradient(135deg, #ff4522, #e62e0b);
   color: #ffffff;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 4px 10px rgba(255, 59, 25, 0.25);
   flex-shrink: 0;
 }
 
@@ -106,8 +111,8 @@
 
 .lead-main-name {
   font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--text-main);
+  font-weight: 800;
+  color: #0f172a;
   letter-spacing: -0.02em;
 }
 
@@ -117,27 +122,29 @@
   gap: 8px;
   margin-top: 4px;
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: #334155;
+  font-weight: 600;
 }
 
 .meta-item {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .meta-sep {
-  color: var(--text-subtle);
+  color: #64748b;
 }
 
 .type-badge {
-  background-color: var(--bg-subtle);
-  color: var(--text-main);
+  background-color: #ffffff;
+  color: #0f172a;
   font-size: 0.725rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 2px 8px;
   border-radius: 4px;
+  border: 1px solid #fed7aa;
 }
 
 .source-meta {
@@ -165,20 +172,20 @@
   gap: 6px;
   padding: 6px 12px;
   font-size: 0.775rem;
-  font-weight: 600;
-  border: 1px solid var(--border-color);
+  font-weight: 700;
+  border: 1.5px solid #fed7aa;
   border-radius: var(--radius-full);
-  background-color: var(--bg-app);
-  color: var(--text-main);
+  background-color: #ffffff;
+  color: #0f172a;
   text-decoration: none;
   transition: all var(--transition-fast);
 }
 
 .contact-pill-btn:hover {
-  background-color: var(--bg-surface);
-  border-color: var(--primary-500);
-  color: var(--primary-600);
-  box-shadow: var(--shadow-sm);
+  background-color: #ff3b19;
+  border-color: #ff3b19;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(255, 59, 25, 0.25);
 }
 
 .summary-details-row {
@@ -186,7 +193,8 @@
   align-items: center;
   gap: 16px;
   font-size: 0.775rem;
-  color: var(--text-muted);
+  color: #334155;
+  font-weight: 600;
 }
 
 .detail-compact-item {
@@ -198,6 +206,11 @@
 /* 2. Pipeline Horizontal Progress Card */
 .pipeline-card {
   padding: 18px 24px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 1.5px solid #93c5fd;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.1);
+  border-radius: var(--radius-lg);
+  color: #0f172a;
 }
 
 .pipeline-header {
@@ -209,8 +222,8 @@
 
 .pipeline-label {
   font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text-muted);
+  font-weight: 800;
+  color: #0f172a;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }

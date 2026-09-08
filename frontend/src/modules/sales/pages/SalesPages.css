@@ -15,17 +15,15 @@
    Mobile App Welcome Hero Card
    -------------------------------------------------------------------------- */
 .sales-mobile-hero {
-  background: rgba(255, 255, 255, 0.68);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
   border-radius: 20px;
   padding: 18px 22px;
-  color: #141416;
+  color: #0f172a;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 25px -4px rgba(20, 20, 22, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(236, 231, 220, 0.85);
+  box-shadow: 0 10px 25px -4px rgba(249, 115, 22, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  border: 1px solid #fed7aa;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -36,12 +34,12 @@
   font-weight: 800;
   margin: 0 0 3px 0;
   letter-spacing: -0.015em;
-  color: #141416;
+  color: #0f172a;
 }
 
 .sales-hero-text p {
   font-size: 0.75rem;
-  color: #71717a;
+  color: #334155;
   margin: 0;
 }
 
@@ -90,11 +88,11 @@
 }
 
 .sales-mobile-kpi-card {
-  background: #ffffff;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-radius: 20px;
   padding: 14px 16px;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -221,23 +219,25 @@
 }
 
 .sales-mobile-lead-card {
-  background: #ffffff;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
   border-radius: 20px;
   padding: 16px 18px;
-  border: 1px solid var(--border-color);
+  border: 1.5px solid #fed7aa;
   border-left: 4px solid #ff3b19;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.12);
   display: flex;
   flex-direction: column;
   gap: 10px;
   transition: all 0.2s ease;
   cursor: pointer;
   box-sizing: border-box;
+  color: #0f172a;
 }
 
 .sales-mobile-lead-card:hover {
-  border-color: #ded8cb;
-  box-shadow: var(--shadow-md);
+  border-color: #fdba74;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(249, 115, 22, 0.18);
 }
 
 .sales-mobile-lead-card:active {
@@ -262,7 +262,7 @@
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #27272a 0%, #141416 100%);
+  background: linear-gradient(135deg, #ff4522 0%, #e62e0b 100%);
   color: #ffffff;
   font-weight: 800;
   font-size: 0.8rem;
@@ -270,8 +270,8 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(20, 20, 22, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 6px rgba(255, 59, 25, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .lead-card-info {
@@ -281,9 +281,9 @@
 }
 
 .lead-card-name {
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   font-weight: 800;
-  color: var(--text-main);
+  color: #0f172a;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -291,8 +291,9 @@
 }
 
 .lead-card-company {
-  font-size: 0.725rem;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #334155;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -311,15 +312,16 @@
   align-items: center;
   gap: 4px;
   font-size: 0.725rem;
-  color: #52525b;
-  background: #fbf9f4;
-  padding: 3px 8px;
-  border-radius: 6px;
-  border: 1px solid #ece7dc;
+  font-weight: 600;
+  color: #0f172a;
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid #fed7aa;
 }
 
 .lead-card-meta-item svg {
-  color: #71717a;
+  color: #ff3b19;
 }
 
 .lead-card-actions {
@@ -532,10 +534,10 @@
 }
 
 .sales-mobile-task-card {
-  background: #ffffff;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
   border-radius: 14px;
   padding: 12px 14px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #fed7aa;
   border-left: 4px solid #ff3b19;
   display: flex;
   align-items: center;
@@ -603,14 +605,14 @@
    Profile Screen Components (Clean & Responsive)
    -------------------------------------------------------------------------- */
 .sales-profile-header-card {
-  background: #ffffff;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
   border-radius: 16px;
   padding: 16px 20px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #93c5fd;
   display: flex;
   align-items: center;
   gap: 16px;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
   box-sizing: border-box;
   width: 100%;
 }
@@ -649,7 +651,7 @@
 
 .sales-profile-email {
   font-size: 0.75rem;
-  color: #64748b;
+  color: #334155;
   margin-top: 2px;
   white-space: nowrap;
   overflow: hidden;
@@ -679,11 +681,11 @@
 }
 
 .sales-profile-card {
-  background: #ffffff;
+  background: linear-gradient(135deg, #fafaf9 0%, #f4f4f5 100%);
   border-radius: 16px;
   padding: 18px 20px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
